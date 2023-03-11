@@ -1,3 +1,6 @@
+.env*
+!.envrc.sample
+
 doc/*.pdf
 /target
 /classes

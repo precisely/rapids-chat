@@ -1,0 +1,9 @@
+# copy this file to .envrc and ensure direnv is installed
+export MAVEN_REPO_AWS_ACCESS_KEY_ID=<GET THIS VALUE FROM ANEIL>
+export MAVEN_REPO_AWS_ACCESS_KEY_SECRET=<GET THIS VALUE FROM ANEIL>
+
+# turn off -Xverify:none which is set in Leiningen's bin/.lein-wrapped script
+# because it causes warnings in JVM 13
+export LEIN_JVM_OPTS="${LEIN_JVM_OPTS-"-XX:+TieredCompilation -XX:TieredStopAtLevel=1"}"
+export AWS_REGION=us-east-1
+set -o allexport; source .env; set +o allexport
