@@ -1,8 +1,8 @@
-(defproject precisely/rapids-chatgpt "0.0.1"
-  :description "A Rapids library for integrating with the OpenAI GPT-3 API"
-  :url "https://github.com/precisely/rapids-chatgpt"
+(defproject precisely/rapids-chat "0.0.1"
+  :description "A Rapids library for orchestrating chat-style large language models like ChatGPT"
+  :url "https://github.com/precisely/rapids-chat"
   :license {:name "All Rights Reserved"
-            :url  "https://precise.ly/rapids"}
+            :url  "https://precise.ly/rapids-chat"}
   :dependencies [[org.clojure/clojure "1.11.1"]
                  [precisely/rapids "LATEST"]
                  #_[potemkin "0.4.5"]]
@@ -31,7 +31,6 @@
             [lein-cloverage "1.2.4"]
             [s3-wagon-private "1.3.4"]]
 
-  :foo :bar
   :deploy-repositories [["precisely" {:url           "s3p://precisely-maven-repo/"
                                       :username      :env/maven_repo_aws_access_key_id
                                       :passphrase    :env/maven_repo_aws_access_key_secret
